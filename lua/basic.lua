@@ -1,32 +1,47 @@
-vim.g.encoding = "UTF-8"
-vim.o.fileencoding = 'utf-8'
--- 显示行号
-vim.wo.number = true
---高亮所在行
-vim.wo.cursorline = true
--- 显示左侧图标指示列
-vim.wo.signcolumn = "yes"
+local options = {
+    encoding = "UTF-8",
+    fileencoding = 'utf-8',
+    -- 显示行号
+    number = true,
+    relativenumber = true,
+    --高亮所在行
+    cursorline = true,
+    -- 显示左侧图标指示列
+    signcolumn = "yes",
 
-vim.o.tabstop = 4
-vim.bo.tabstop = 4
-vim.o.softtabstop = 4
-vim.o.shiftround = true
+    tabstop = 4,
+    tabstop = 4,
+    softtabstop = 4,
+    shiftround = true,
 
-vim.o.shiftwidth = 4
-vim.bo.shiftwidth = 4
+    shiftwidth = 4,
+    shiftwidth = 4,
 
-vim.o.expandtab = true
-vim.bo.expandtab = true
-vim.o.autoindent = true
-vim.bo.autoindent = true
-vim.o.smartindent = true
+    expandtab = true,
+    expandtab = true,
+    autoindent = true,
+    autoindent = true,
+    smartindent = true,
 
-vim.o.ignorecase = true
-vim.o.smartcase = true
+    ignorecase = true,
+    smartcase = true,
 
--- 等待mappings
-vim.o.timeoutlen = 500
+    timeoutlen = 500,
 
-vim.o.background = "dark"
-vim.o.termguicolors = true
-vim.opt.termguicolors = true
+    background = "dark",
+    termguicolors = true,
+    termguicolors = true,
+
+    scrolloff = 8,
+    sidescrolloff = 8,
+
+    incsearch = true,
+}
+
+vim.opt.shortmess:append "c"
+
+for k, v in pairs(options) do
+    vim.opt[k] = v
+end
+
+vim.cmd "colorscheme everforest"

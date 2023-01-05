@@ -1,0 +1,5 @@
+require('basic')
+require('keybindings')
+require('plugins')
+require('plugin-config/bufferline')
+require('plugin-config/nvim-tree')

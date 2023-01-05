@@ -1,8 +1,9 @@
+local map = vim.api.nvim_set_keymap
+local opt = { noremap = true, silent = true }
+
+map('', '<Space>', '<Nop>', opt)
 vim.g.mapleaer = " "
 vim.g.maplocalleader = " "
-
-local map = vim.api.nvim_set_keymap
-local opt = {noremap = true, silent = true }
 
 map('v', '<', '<gv', opt)
 map('v', '>', '>gv', opt)
@@ -24,7 +25,7 @@ map("n", "<A-j>", "<C-w>j", opt)
 map("n", "<A-k>", "<C-w>k", opt)
 map("n", "<A-l>", "<C-w>l", opt)
 
-map("i", "jj", "<ESC>", opt)
+map("i", "jk", "<ESC>", opt)
 
 -- bufferline 左右切换
 map("n", "<C-h>", ":BufferLineCyclePrev<CR>", opt)
