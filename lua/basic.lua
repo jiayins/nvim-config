@@ -1,12 +1,9 @@
 local options = {
     encoding = "UTF-8",
     fileencoding = 'utf-8',
-    -- 显示行号
     number = true,
     relativenumber = true,
-    --高亮所在行
     cursorline = true,
-    -- 显示左侧图标指示列
     signcolumn = "yes",
 
     tabstop = 4,
